@@ -6,11 +6,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-
-  --90s-purple: #9370DB;
-  --90s-pink: #FF69B4;
-  --90s-green: #32CD32;
-  --90s-yellow: #FFD700;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,30 +17,20 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    ),
+    url('/background-pattern.png');
+  background-size: cover;
+  font-family: "Gill Sans Extrabold", Helvetica, sans-serif }
 
- 
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-}
-
-button {
-  background-color: var(--90s-yellow);
-  color: #333;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: var(--90s-pink);
-}
+  .receipt { font-family: Courier, "Lucida Console", monospace   }
 
 @layer utilities {
   .text-balance {
